@@ -1,12 +1,66 @@
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { Button } from './components/ui/button';
 import { Card, CardContent } from './components/ui/card';
 
+const sampleData = [
+  {
+    name: '2',
+    count: 1,
+  },
+  {
+    name: '3',
+    count: 7,
+  },
+  {
+    name: '4',
+    count: 4,
+  },
+  {
+    name: '5',
+    count: 6,
+  },
+  {
+    name: '6',
+    count: 9,
+  },
+  {
+    name: '7',
+    count: 8,
+  },
+  {
+    name: '8',
+    count: 4,
+  },
+  {
+    name: '9',
+    count: 7,
+  },
+  {
+    name: '10',
+    count: 3,
+  },
+  {
+    name: '11',
+    count: 2,
+  },
+  {
+    name: '12',
+    count: 1,
+  },
+];
+
 function App() {
   return (
-    <div className='grid gap-2 grid-cols-2 h-screen'>
+    <div className='grid gap-2 grid-cols-[75%_25%] h-screen'>
       <Card className='row-span-3'>
-        <CardContent>
-          <p className='text-2xl'>Graph</p>
+        <CardContent className='h-full w-full'>
+          <ResponsiveContainer width='100%' height='100%'>
+            <BarChart data={sampleData}>
+              <XAxis dataKey='name' />
+              <YAxis />
+              <Bar dataKey='count' fill='#8884d8' />
+            </BarChart>
+          </ResponsiveContainer>
         </CardContent>
       </Card>
       <Card>
