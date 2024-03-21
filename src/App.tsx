@@ -19,8 +19,23 @@ function App() {
         </CardContent>
       </Card>
       <Card>
-        <CardContent>
-          <p className='text-2xl'>Players</p>
+        <CardContent className='flex flex-col gap-2 justify-center h-full'>
+          <div className='flex gap-1 justify-center items-center'>
+            <div className='w-8 h-8 bg-red-500  border-gray-500 border-2 rounded-md' />
+            <span className='text-lg'>Player 1</span>
+          </div>
+          <div className='flex gap-1 justify-center items-center'>
+            <div className='w-8 h-8 bg-orange-500 border-gray-500 border-2 rounded-md' />
+            <span className='text-lg'>Player 2</span>
+          </div>
+          <div className='flex gap-1 justify-center items-center'>
+            <div className='w-8 h-8 bg-white border-gray-500 border-2 rounded-md' />
+            <span className='text-lg'>Player 3</span>
+          </div>
+          <div className='flex gap-1 justify-center items-center'>
+            <div className='w-8 h-8 bg-blue-500  border-gray-500 border-2 rounded-md' />
+            <span className='text-lg'>Player 4</span>
+          </div>
         </CardContent>
       </Card>
     </div>
