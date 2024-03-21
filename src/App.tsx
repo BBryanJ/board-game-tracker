@@ -1,3 +1,4 @@
+import { Button } from './components/ui/button';
 import { Card, CardContent } from './components/ui/card';
 
 function App() {
@@ -14,8 +15,21 @@ function App() {
         </CardContent>
       </Card>
       <Card>
-        <CardContent>
-          <p className='text-2xl'>Input</p>
+        <CardContent className='h-full flex justify-center items-center'>
+          <div className='grid grid-cols-3 gap-2'>
+            <Button variant='outline'>2</Button>
+            <Button variant='outline'>3</Button>
+            <Button variant='outline'>4</Button>
+            <Button variant='outline'>5</Button>
+            <Button variant='outline'>6</Button>
+            <Button variant='outline'>7</Button>
+            <Button variant='outline'>8</Button>
+            <Button variant='outline'>9</Button>
+            <Button variant='outline'>10</Button>
+            <Button variant='outline'>11</Button>
+            <Button variant='outline'>12</Button>
+            <Button variant='outline'>Undo</Button>
+          </div>
         </CardContent>
       </Card>
       <Card>
