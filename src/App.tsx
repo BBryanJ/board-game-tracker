@@ -51,7 +51,7 @@ const sampleData = [
 
 function App() {
   return (
-    <div className='grid gap-2 grid-cols-[75%_25%] h-screen'>
+    <div className='grid gap-2 grid-cols-[75%_25%] grid-rows-3 h-screen'>
       <Card className='row-span-3'>
         <CardContent className='h-full w-full'>
           <ResponsiveContainer width='100%' height='100%'>
@@ -63,8 +63,8 @@ function App() {
           </ResponsiveContainer>
         </CardContent>
       </Card>
-      <Card>
-        <CardContent className='flex flex-col py-1 overflow-auto'>
+      <Card className='overflow-y-auto'>
+        <CardContent className='flex flex-col py-1'>
           <div className='bg-red-300 px-2 w-full'>
             <span>
               <b className='font-bold'>Player 1</b> rolled a{' '}
