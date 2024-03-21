@@ -10,8 +10,79 @@ function App() {
         </CardContent>
       </Card>
       <Card>
-        <CardContent>
-          <p className='text-2xl'>History</p>
+        <CardContent className='flex flex-col py-1 overflow-auto'>
+          <div className='bg-red-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 1</b> rolled a{' '}
+              <b className='font-semibold'>5</b>
+            </span>
+          </div>
+          <div className='bg-orange-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 2</b> rolled a{' '}
+              <b className='font-semibold'>7</b>
+            </span>
+          </div>
+          <div className='bg-white px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 3</b> rolled a{' '}
+              <b className='font-semibold'>2</b>
+            </span>
+          </div>
+          <div className='bg-blue-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 4</b> rolled a{' '}
+              <b className='font-semibold'>10</b>
+            </span>
+          </div>
+          <div className='bg-red-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 1</b> rolled a{' '}
+              <b className='font-semibold'>5</b>
+            </span>
+          </div>
+          <div className='bg-orange-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 2</b> rolled a{' '}
+              <b className='font-semibold'>7</b>
+            </span>
+          </div>
+          <div className='bg-white px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 3</b> rolled a{' '}
+              <b className='font-semibold'>2</b>
+            </span>
+          </div>
+          <div className='bg-blue-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 4</b> rolled a{' '}
+              <b className='font-semibold'>10</b>
+            </span>
+          </div>
+          <div className='bg-red-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 1</b> rolled a{' '}
+              <b className='font-semibold'>5</b>
+            </span>
+          </div>
+          <div className='bg-orange-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 2</b> rolled a{' '}
+              <b className='font-semibold'>7</b>
+            </span>
+          </div>
+          <div className='bg-white px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 3</b> rolled a{' '}
+              <b className='font-semibold'>2</b>
+            </span>
+          </div>
+          <div className='bg-blue-300 px-2 w-full'>
+            <span>
+              <b className='font-bold'>Player 4</b> rolled a{' '}
+              <b className='font-semibold'>10</b>
+            </span>
+          </div>
         </CardContent>
       </Card>
       <Card>
