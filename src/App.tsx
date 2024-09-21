@@ -51,8 +51,8 @@ const sampleData = [
 
 function App() {
 	return (
-		<div className='grid h-screen grid-cols-[75%_25%] grid-rows-3 gap-2'>
-			<Card className='row-span-3'>
+		<div className='grid h-screen grid-cols-1 grid-rows-3 gap-2 md:grid-cols-[75%_25%]'>
+			<Card className='order-1 row-span-3'>
 				<CardContent className='h-full w-full'>
 					<ResponsiveContainer width='100%' height='100%'>
 						<BarChart data={sampleData}>
@@ -63,7 +63,7 @@ function App() {
 					</ResponsiveContainer>
 				</CardContent>
 			</Card>
-			<Card className='overflow-y-auto'>
+			<Card className='order-3 overflow-y-auto md:order-2'>
 				<CardContent className='flex flex-col py-1'>
 					<div className='w-full bg-red-300 px-2'>
 						<span>
@@ -139,7 +139,7 @@ function App() {
 					</div>
 				</CardContent>
 			</Card>
-			<Card>
+			<Card className='order-2 md:order-3'>
 				<CardContent className='flex h-full items-center justify-center'>
 					<div className='grid grid-cols-3 gap-2'>
 						<Button variant='outline'>2</Button>
@@ -157,10 +157,10 @@ function App() {
 					</div>
 				</CardContent>
 			</Card>
-			<Card>
+			<Card className='order-4'>
 				<CardContent className='flex h-full flex-col justify-center gap-2'>
 					<div className='flex items-center justify-center gap-1'>
-						<div className='h-8 w-8 rounded-md  border-2 border-gray-500 bg-red-500' />
+						<div className='h-8 w-8 rounded-md border-2 border-gray-500 bg-red-500' />
 						<span className='text-lg'>Player 1</span>
 					</div>
 					<div className='flex items-center justify-center gap-1'>
@@ -172,7 +172,7 @@ function App() {
 						<span className='text-lg'>Player 3</span>
 					</div>
 					<div className='flex items-center justify-center gap-1'>
-						<div className='h-8 w-8 rounded-md  border-2 border-gray-500 bg-blue-500' />
+						<div className='h-8 w-8 rounded-md border-2 border-gray-500 bg-blue-500' />
 						<span className='text-lg'>Player 4</span>
 					</div>
 				</CardContent>
