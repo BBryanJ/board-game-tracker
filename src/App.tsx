@@ -51,9 +51,9 @@ const sampleData = [
 
 function App() {
   return (
-    <div className='grid gap-2 grid-cols-[75%_25%] grid-rows-3 h-screen'>
-      <Card className='row-span-3'>
-        <CardContent className='h-full w-full'>
+    <div className='grid gap-2 grid-cols-1 md:grid-cols-[75%_25%] grid-rows-3 h-screen'>
+      <Card className='order-1 row-span-3'>
+        <CardContent className='w-full h-full'>
           <ResponsiveContainer width='100%' height='100%'>
             <BarChart data={sampleData}>
               <XAxis dataKey='name' />
@@ -63,75 +63,75 @@ function App() {
           </ResponsiveContainer>
         </CardContent>
       </Card>
-      <Card className='overflow-y-auto'>
+      <Card className='overflow-y-auto order-3 md:order-2'>
         <CardContent className='flex flex-col py-1'>
-          <div className='bg-red-300 px-2 w-full'>
+          <div className='px-2 w-full bg-red-300'>
             <span>
               <b className='font-bold'>Player 1</b> rolled a{' '}
               <b className='font-semibold'>5</b>
             </span>
           </div>
-          <div className='bg-orange-300 px-2 w-full'>
+          <div className='px-2 w-full bg-orange-300'>
             <span>
               <b className='font-bold'>Player 2</b> rolled a{' '}
               <b className='font-semibold'>7</b>
             </span>
           </div>
-          <div className='bg-white px-2 w-full'>
+          <div className='px-2 w-full bg-white'>
             <span>
               <b className='font-bold'>Player 3</b> rolled a{' '}
               <b className='font-semibold'>2</b>
             </span>
           </div>
-          <div className='bg-blue-300 px-2 w-full'>
+          <div className='px-2 w-full bg-blue-300'>
             <span>
               <b className='font-bold'>Player 4</b> rolled a{' '}
               <b className='font-semibold'>10</b>
             </span>
           </div>
-          <div className='bg-red-300 px-2 w-full'>
+          <div className='px-2 w-full bg-red-300'>
             <span>
               <b className='font-bold'>Player 1</b> rolled a{' '}
               <b className='font-semibold'>5</b>
             </span>
           </div>
-          <div className='bg-orange-300 px-2 w-full'>
+          <div className='px-2 w-full bg-orange-300'>
             <span>
               <b className='font-bold'>Player 2</b> rolled a{' '}
               <b className='font-semibold'>7</b>
             </span>
           </div>
-          <div className='bg-white px-2 w-full'>
+          <div className='px-2 w-full bg-white'>
             <span>
               <b className='font-bold'>Player 3</b> rolled a{' '}
               <b className='font-semibold'>2</b>
             </span>
           </div>
-          <div className='bg-blue-300 px-2 w-full'>
+          <div className='px-2 w-full bg-blue-300'>
             <span>
               <b className='font-bold'>Player 4</b> rolled a{' '}
               <b className='font-semibold'>10</b>
             </span>
           </div>
-          <div className='bg-red-300 px-2 w-full'>
+          <div className='px-2 w-full bg-red-300'>
             <span>
               <b className='font-bold'>Player 1</b> rolled a{' '}
               <b className='font-semibold'>5</b>
             </span>
           </div>
-          <div className='bg-orange-300 px-2 w-full'>
+          <div className='px-2 w-full bg-orange-300'>
             <span>
               <b className='font-bold'>Player 2</b> rolled a{' '}
               <b className='font-semibold'>7</b>
             </span>
           </div>
-          <div className='bg-white px-2 w-full'>
+          <div className='px-2 w-full bg-white'>
             <span>
               <b className='font-bold'>Player 3</b> rolled a{' '}
               <b className='font-semibold'>2</b>
             </span>
           </div>
-          <div className='bg-blue-300 px-2 w-full'>
+          <div className='px-2 w-full bg-blue-300'>
             <span>
               <b className='font-bold'>Player 4</b> rolled a{' '}
               <b className='font-semibold'>10</b>
@@ -139,8 +139,8 @@ function App() {
           </div>
         </CardContent>
       </Card>
-      <Card>
-        <CardContent className='h-full flex justify-center items-center'>
+      <Card className='order-2 md:order-3'>
+        <CardContent className='flex justify-center items-center h-full'>
           <div className='grid grid-cols-3 gap-2'>
             <Button variant='outline'>2</Button>
             <Button variant='outline'>3</Button>
@@ -157,22 +157,22 @@ function App() {
           </div>
         </CardContent>
       </Card>
-      <Card>
+      <Card className='order-4'>
         <CardContent className='flex flex-col gap-2 justify-center h-full'>
           <div className='flex gap-1 justify-center items-center'>
-            <div className='w-8 h-8 bg-red-500  border-gray-500 border-2 rounded-md' />
+            <div className='w-8 h-8 bg-red-500 rounded-md border-2 border-gray-500' />
             <span className='text-lg'>Player 1</span>
           </div>
           <div className='flex gap-1 justify-center items-center'>
-            <div className='w-8 h-8 bg-orange-500 border-gray-500 border-2 rounded-md' />
+            <div className='w-8 h-8 bg-orange-500 rounded-md border-2 border-gray-500' />
             <span className='text-lg'>Player 2</span>
           </div>
           <div className='flex gap-1 justify-center items-center'>
-            <div className='w-8 h-8 bg-white border-gray-500 border-2 rounded-md' />
+            <div className='w-8 h-8 bg-white rounded-md border-2 border-gray-500' />
             <span className='text-lg'>Player 3</span>
           </div>
           <div className='flex gap-1 justify-center items-center'>
-            <div className='w-8 h-8 bg-blue-500  border-gray-500 border-2 rounded-md' />
+            <div className='w-8 h-8 bg-blue-500 rounded-md border-2 border-gray-500' />
             <span className='text-lg'>Player 4</span>
           </div>
         </CardContent>
