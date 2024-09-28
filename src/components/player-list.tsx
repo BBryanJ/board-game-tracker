@@ -9,17 +9,27 @@ interface PlayerListProps {
 	players: Player[];
 }
 
+const colorVariants: Record<string, string> = {
+	red: 'bg-red-500',
+	orange: 'bg-orange-500',
+	white: 'bg-white',
+	blue: 'bg-blue-500',
+};
+
 export function PlayerList({ players }: PlayerListProps) {
 	return (
-		<CardContent className='flex h-full flex-col items-center gap-2'>
-			{players.map((player, index) => (
-				<div key={index} className='flex items-center gap-2'>
-					<div
-						className={`h-8 w-8 rounded-md border-2 border-gray-500 bg-${player.color}-500`}
-					/>
-					<span>{player.name}</span>
-				</div>
-			))}
+		<CardContent className='flex flex-col gap-2 justify-center items-center h-full'>
+			{players.map((player, index) => {
+				const playerColor = player.color;
+				return (
+					<div key={index} className='flex gap-2 items-center'>
+						<div
+							className={`w-8 h-8 rounded-md border-2 border-gray-500 ${colorVariants[playerColor]}`}
+						/>
+						<span>{player.name}</span>
+					</div>
+				);
+			})}
 		</CardContent>
 	);
 }

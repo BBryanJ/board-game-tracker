@@ -67,27 +67,27 @@ const rollHistory = [
 ];
 
 const players = [
-	{ name: 'Player 0', color: 'red' },
-	{ name: 'Player 1', color: 'orange' },
-	{ name: 'Player 2', color: 'white' },
-	{ name: 'Player 3', color: 'blue' },
+	{ name: 'Player 1', color: 'red' },
+	{ name: 'Player 2', color: 'orange' },
+	{ name: 'Player 3', color: 'white' },
+	{ name: 'Player 4', color: 'blue' },
 ];
 
 function App() {
 	return (
 		<div className='grid h-screen grid-cols-1 grid-rows-3 gap-2 md:grid-cols-[75%_25%]'>
 			<Card className='order-1 row-span-3'>
-				<CardContent className='h-full w-full'>
+				<CardContent className='w-full h-full'>
 					<DiceRollChart data={sampleData} />
 				</CardContent>
 			</Card>
-			<Card className='order-3 overflow-y-auto md:order-2'>
+			<Card className='overflow-y-auto order-3 md:order-2'>
 				<CardContent className='flex flex-col py-1'>
 					<RollHistory rolls={rollHistory} />
 				</CardContent>
 			</Card>
 			<Card className='order-2 md:order-3'>
-				<CardContent className='flex h-full items-center justify-center'>
+				<CardContent className='flex justify-center items-center h-full'>
 					<DiceButtons onRoll={() => {}} onUndo={() => {}} />
 				</CardContent>
 			</Card>

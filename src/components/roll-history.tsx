@@ -12,17 +12,17 @@ interface RollHistoryProps {
 export function RollHistory({ rolls }: RollHistoryProps) {
 	return (
 		<CardContent className='flex flex-col py-1'>
-			{rolls.map((roll, index) => (
-				<div
-					key={index}
-					className={`w-full ${getPlayerColor(roll.player)} px-2`}
-				>
-					<span>
-						<b className='font-bold'>{roll.player}</b> rolled a{' '}
-						<b className='font-semibold'>{roll.value}</b>
-					</span>
-				</div>
-			))}
+			{rolls.map((roll, index) => {
+				const playerColor = getPlayerColor(roll.player);
+				return (
+					<div key={index} className={`px-2 w-full ${playerColor}`}>
+						<span>
+							<b className='font-bold'>{roll.player}</b> rolled a{' '}
+							<b className='font-semibold'>{roll.value}</b>
+						</span>
+					</div>
+				);
+			})}
 		</CardContent>
 	);
 }
