@@ -3,6 +3,7 @@ import { DiceRollChart } from './components/dice-roll-chart';
 import { RollHistory } from './components/roll-history';
 import { DiceButtons } from './components/dice-buttons';
 import { PlayerList } from './components/player-list';
+import { usePlayersStore } from './store/usePlayersStore';
 
 const sampleData = [
 	{
@@ -66,28 +67,23 @@ const rollHistory = [
 	{ player: 'Player 4', value: 10 },
 ];
 
-const players = [
-	{ name: 'Player 1', color: 'red' },
-	{ name: 'Player 2', color: 'orange' },
-	{ name: 'Player 3', color: 'white' },
-	{ name: 'Player 4', color: 'blue' },
-];
-
 function App() {
+	const players = usePlayersStore(state => state.players);
+
 	return (
 		<div className='grid h-screen grid-cols-1 grid-rows-3 gap-2 md:grid-cols-[75%_25%]'>
 			<Card className='order-1 row-span-3'>
-				<CardContent className='w-full h-full'>
+				<CardContent className='h-full w-full'>
 					<DiceRollChart data={sampleData} />
 				</CardContent>
 			</Card>
-			<Card className='overflow-y-auto order-3 md:order-2'>
+			<Card className='order-3 overflow-y-auto md:order-2'>
 				<CardContent className='flex flex-col py-1'>
 					<RollHistory rolls={rollHistory} />
 				</CardContent>
 			</Card>
 			<Card className='order-2 md:order-3'>
-				<CardContent className='flex justify-center items-center h-full'>
+				<CardContent className='flex h-full items-center justify-center'>
 					<DiceButtons onRoll={() => {}} onUndo={() => {}} />
 				</CardContent>
 			</Card>
