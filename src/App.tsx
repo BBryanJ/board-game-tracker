@@ -4,77 +4,19 @@ import { RollHistory } from './components/roll-history';
 import { DiceButtons } from './components/dice-buttons';
 import { PlayerList } from './components/player-list';
 import { usePlayersStore } from './store/usePlayersStore';
-
-const sampleData = [
-	{
-		name: '2',
-		count: 1,
-	},
-	{
-		name: '3',
-		count: 7,
-	},
-	{
-		name: '4',
-		count: 4,
-	},
-	{
-		name: '5',
-		count: 6,
-	},
-	{
-		name: '6',
-		count: 9,
-	},
-	{
-		name: '7',
-		count: 8,
-	},
-	{
-		name: '8',
-		count: 4,
-	},
-	{
-		name: '9',
-		count: 7,
-	},
-	{
-		name: '10',
-		count: 3,
-	},
-	{
-		name: '11',
-		count: 2,
-	},
-	{
-		name: '12',
-		count: 1,
-	},
-];
-
-const rollHistory = [
-	{ player: 'Player 1', value: 5 },
-	{ player: 'Player 2', value: 7 },
-	{ player: 'Player 3', value: 2 },
-	{ player: 'Player 4', value: 10 },
-	{ player: 'Player 1', value: 5 },
-	{ player: 'Player 2', value: 7 },
-	{ player: 'Player 3', value: 2 },
-	{ player: 'Player 4', value: 10 },
-	{ player: 'Player 1', value: 5 },
-	{ player: 'Player 2', value: 7 },
-	{ player: 'Player 3', value: 2 },
-	{ player: 'Player 4', value: 10 },
-];
+import { useHistoryStore } from './store/useHistoryStore';
+import { useRollsStore } from './store/useRollsStore';
 
 function App() {
 	const players = usePlayersStore(state => state.players);
+	const rollHistory = useHistoryStore(state => state.rolls);
+	const rolls = useRollsStore(state => state.data);
 
 	return (
 		<div className='grid h-screen grid-cols-1 grid-rows-3 gap-2 md:grid-cols-[75%_25%]'>
 			<Card className='order-1 row-span-3'>
 				<CardContent className='h-full w-full'>
-					<DiceRollChart data={sampleData} />
+					<DiceRollChart data={rolls} />
 				</CardContent>
 			</Card>
 			<Card className='order-3 overflow-y-auto md:order-2'>
