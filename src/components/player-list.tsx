@@ -1,6 +1,7 @@
 import { CardContent } from './ui/card';
 
 interface Player {
+	id: number;
 	name: string;
 	color: string;
 }
@@ -19,10 +20,10 @@ const colorVariants: Record<string, string> = {
 export function PlayerList({ players }: PlayerListProps) {
 	return (
 		<CardContent className='flex flex-col gap-2 justify-center items-center h-full'>
-			{players.map((player, index) => {
+			{players.map(player => {
 				const playerColor = player.color;
 				return (
-					<div key={index} className='flex gap-2 items-center'>
+					<div key={player.id} className='flex gap-2 items-center'>
 						<div
 							className={`w-8 h-8 rounded-md border-2 border-gray-500 ${colorVariants[playerColor]}`}
 						/>

@@ -7,7 +7,12 @@ type State = {
 	}[];
 };
 
-export const useRollsStore = create<State>(() => ({
+type Actions = {
+	addToRollData: (name: string) => void;
+	removeToRollData: (name: string) => void;
+};
+
+export const useRollsStore = create<State & Actions>(set => ({
 	data: [
 		{
 			name: '2',
@@ -54,4 +59,24 @@ export const useRollsStore = create<State>(() => ({
 			count: 1,
 		},
 	],
+	addToRollData: (name: string) => {
+		set(state => {
+			return {
+				data: state.data.map(item =>
+					item.name === name ? { ...item, count: item.count + 1 } : item,
+				),
+			};
+		});
+	},
+	removeToRollData: (name: string) => {
+		set(state => {
+			return {
+				data: state.data.map(item =>
+					item.name === name
+						? { ...item, count: Math.max(item.count - 1, 0) }
+						: item,
+				),
+			};
+		});
+	},
 }));
